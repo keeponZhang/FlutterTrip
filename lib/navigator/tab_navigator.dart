@@ -57,6 +57,21 @@ class _TabNavigatorState extends State<TabNavigator> {
   }
 
   _navigationBarItem(IconData iconData, String itemName,int index) {
+    // return BottomNavigationBarItem(
+    //     icon: Icon(
+    //       iconData,
+    //       color: defaultColor,
+    //     ),
+    //     activeIcon: Icon(
+    //       iconData,
+    //       color: activeColor,
+    //     ),
+    //     title: Text(
+    //       itemName,
+    //       style:
+    //           TextStyle(color: _currentIndex == index ? activeColor : defaultColor),
+    //     ));
+
     return BottomNavigationBarItem(
         icon: Icon(
           iconData,
@@ -66,10 +81,6 @@ class _TabNavigatorState extends State<TabNavigator> {
           iconData,
           color: activeColor,
         ),
-        title: Text(
-          itemName,
-          style:
-              TextStyle(color: _currentIndex == index ? activeColor : defaultColor),
-        ));
+        label:itemName);
   }
 }
