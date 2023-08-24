@@ -4,9 +4,9 @@
     package="com.flutter.wy.xiecheng_demo">
 
     <application
-        android:name="io.flutter.app.FlutterApplication"
         android:icon="@mipmap/avatar"
         android:label="Flutter仿携程"
+        android:name="${applicationName}"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".SplashActivity" android:theme="@style/SplashTheme">
             <intent-filter>
@@ -31,6 +31,11 @@
             <meta-data
                 android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
                 android:value="true" />
+
+            <meta-data
+                android:name="flutterEmbedding"
+                android:value="2" />
+
         </activity>
     </application>
 
