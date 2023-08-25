@@ -12,7 +12,9 @@ void main() {
 
   // testConst();
   // testConst2();
-  testConst3();
+  // testConst3();
+  testIdentical();
+  testIdenticalFinal();
 }
 
 void testVar() {
@@ -129,3 +131,25 @@ void testConst3() {
   // list5 = [5, 5];
   print('list5[0]=${list5}');
 }
+
+//相同的const常量不会在内存中重复创建。
+void testIdentical() {
+  const List ls = [1, 2, 3];
+
+  const List ls2 = [1, 2, 3];
+  print(identical(ls, ls2));
+}
+
+void testIdenticalFinal() {
+  final List ls = [1, 2, 3];
+
+  final List ls2 = [1, 2, 3];
+  print("final ${identical(ls, ls2)}");
+}
+
+void testConst4() {
+  final dt = DateTime.now();
+  //报错，需要是编译时常量
+  // const dt2 = DateTime.now();
+}
+
