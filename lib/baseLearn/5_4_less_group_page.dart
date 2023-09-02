@@ -52,7 +52,11 @@ class LessGroupPage extends StatelessWidget {
                 indent: 50, // 左边距
                 color: Colors.orange,
               ),
-
+              const Divider(
+                height: 59, // 容器的高度
+                indent: 50, // 左边距
+                color: Colors.red,
+              ),
               /// Card : 带有圆角、阴影、边框效果的卡片
               Card(
                 color: Colors.blue,

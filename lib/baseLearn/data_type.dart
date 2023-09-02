@@ -1,6 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(const DataType());
+}
+
 // 常用数据类型
 class DataType extends StatefulWidget {
   const DataType({Key key}) : super(key: key);
@@ -10,17 +14,36 @@ class DataType extends StatefulWidget {
 }
 
 class _DataTypeState extends State<DataType> {
+  // @override
+  // Widget build(BuildContext context) {
+  //   // _numType();
+  //   // stringType();
+  //   // boolType();
+  //   // listType();
+  //   // mapType();
+  //   // tips();
+  //
+  //   return Container(
+  //     child: const Text('常用数据类型，请查看控制台输出'),
+  //   );
+  // }
+
   @override
   Widget build(BuildContext context) {
-    _numType();
-    // stringType();
-    // boolType();
-    // listType();
-    mapType();
-    // tips();
-    return Container(
-      child: const Text('常用数据类型，请查看控制台输出'),
-    );
+    var currentTitle = "Flutter必备Dart基础";
+    return MaterialApp(
+        title: currentTitle,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text(currentTitle),
+          ),
+          body: Container(
+            child: const Text('常用数据类型，请查看控制台输出'),
+          ),
+        ));
   }
 
   /// 数字类型
@@ -36,10 +59,9 @@ class _DataTypeState extends State<DataType> {
       print(num1.toInt()); // 转换为int类型
       print(num1.toDouble()); // 转换为double类型
     }
+  }
 
-  }
-  void printCurrentMethod(){
-  }
+  void printCurrentMethod() {}
 
   /// 字符串类型
   stringType() {

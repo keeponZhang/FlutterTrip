@@ -21,13 +21,13 @@ class TestGeneric {
 /// 泛型类
 /// 作用：提高代码的复用程度
 class Cache<T> {
-  static final Map<String, Object?> _cached = Map();
+  static final Map<String, Object> _cached = Map();
   /// 泛型方法
   void setItem(String key, T value) {
     _cached[key] = value as Object;
   }
 
-  Object? getItem(String key) {
+  Object getItem(String key) {
     return _cached[key];
   }
 }

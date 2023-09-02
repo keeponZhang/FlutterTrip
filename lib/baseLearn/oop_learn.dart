@@ -1,7 +1,7 @@
 /// 定义一个Dart类，所有的类都继承自Object
 class Person {
-  String? name;
-  int? age;
+  String name;
+  int age;
 
   Person(this.name, this.age);
 
@@ -13,14 +13,14 @@ class Person {
 }
 
 class Student extends Person {
-  String? _school; // 私有变量
-  String? city;
-  String? country;
+  String _school; // 私有变量
+  String city;
+  String country;
 
   /// 通过get、set方法来访问类的私有字段
-  String? get school => _school;
+  String get school => _school;
 
-  set school(String? value) {
+  set school(String value) {
     _school = value;
   }
 
@@ -28,7 +28,7 @@ class Student extends Person {
   /// this._school 自有参数
   /// this.city 可选参数
   /// this.country 默认参数
-  Student(this._school, String? name, int? age,
+  Student(this._school, String name, int age,
       {this.city, this.country = 'China'})
       : super(name, age) {}
 
@@ -118,3 +118,26 @@ class FunctionLearn {
 //   }
 //   Logger._internal;
 // }
+// 工厂构造方法 - 单例模式
+class Logger {
+  final String name;
+
+  static  Map<String, Logger> _cache = {};
+
+  factory Logger(String name) {
+    if (_cache.containsKey(name)) {
+      return _cache[name];
+    } else {
+      final p = Logger._internal(name);
+      _cache[name] = p;
+      return p;
+    }
+  }
+
+  Logger._internal(this.name);
+
+  log (String msg) {
+    print(msg);
+  }
+
+}

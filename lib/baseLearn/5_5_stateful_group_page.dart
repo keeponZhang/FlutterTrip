@@ -104,7 +104,7 @@ class _StatefulGroupState extends State<StatefulGroupPage> {
                     Image.network(
                       'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.daimg.com%2Fuploads%2Fallimg%2F210114%2F1-210114151951.jpg&refer=http%3A%2F%2Fimg.daimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668570386&t=2379ce7e4f93f0cd74422e9d7e0c6ef4',
                       width: 200,
-                      height: 200,
+                      height: 20,
                     ),
                     const TextField(
                       decoration: InputDecoration(
