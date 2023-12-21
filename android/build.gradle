@@ -1,16 +1,32 @@
 buildscript {
     repositories {
+        maven {
+            url "https://nexus-android.duowan.com/nexus/content/groups/public"
+        }
+        maven {
+            url "https://nexus-android.duowan.com/nexus/content/repositories/thirdparty/"
+        }
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.2'
+//        classpath 'com.android.tools.build:gradle:3.4.2'
+//        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath 'com.android.tools.build:gradle:4.2.2'
+
+
     }
 }
 
 allprojects {
     repositories {
+        maven {
+            url "https://nexus-android.duowan.com/nexus/content/groups/public"
+        }
+        maven {
+            url "https://nexus-android.duowan.com/nexus/content/repositories/thirdparty/"
+        }
         google()
         jcenter()
     }

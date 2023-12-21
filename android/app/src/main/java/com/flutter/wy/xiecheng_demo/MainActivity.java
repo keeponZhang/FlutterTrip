@@ -4,18 +4,19 @@ import android.os.Bundle;
 
 import com.wy.plugin.asr.AsrPlugin;
 
-import io.flutter.app.FlutterActivity;
+//import io.flutter.app.FlutterActivity;
 import io.flutter.plugins.GeneratedPluginRegistrant;
+import io.flutter.embedding.android.FlutterActivity;
 
 public class MainActivity extends FlutterActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        GeneratedPluginRegistrant.registerWith(this);
-        registerSelfPlugin();
+        //GeneratedPluginRegistrant.registerWith(this);
+        //registerSelfPlugin();
     }
 
     private void registerSelfPlugin() {
-        AsrPlugin.registerWith(registrarFor("com.wy.plugin.asr.AsrPlugin"));
+        //AsrPlugin.registerWith(registrarFor("com.wy.plugin.asr.AsrPlugin"));
     }
 }
