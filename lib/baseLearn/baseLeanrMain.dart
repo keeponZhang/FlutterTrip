@@ -6,7 +6,7 @@ import 'data_type.dart';
 import 'generic_learn.dart';
 import 'oop_learn.dart';
 
-// void main() => runApp(MyApp());
+void main() => runApp(BaseLearnApp());
 
 class BaseLearnApp extends StatefulWidget {
   @override
@@ -21,7 +21,7 @@ class _BaseLearnAppState extends State<BaseLearnApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter必备Dart基础'),
+      home: MyHomePage(title: 'MyHomePage Flutter必备Dart基础'),
     );
   }
 }
@@ -36,11 +36,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  //build方法可以理解为androidView中的onDraw，中文名字是脚手架，也就是页面的骨架
   @override
   Widget build(BuildContext context) {
    _oopLearn();
     return Scaffold(
       appBar: AppBar(
+        //这里widget就是appbar
         title: Text(widget.title),
       ),
       body: Center(

@@ -3,7 +3,7 @@ void main() {
 
   // testString2();
   // testString3();
-// testStringBuffer();
+testStringBuffer();
 // testString4();
 // testExpression();
 // testBoolean();
@@ -103,6 +103,7 @@ void testStringBuffer() {
   sb.write("dd");
   sb.write("ss");
   print('sb=$sb');
+  //链式调用是两个点
   sb..write("keepon")..write("on");
 
   print('sb=$sb');

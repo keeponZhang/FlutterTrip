@@ -1,20 +1,20 @@
 void main() {
-  // testVar();
-  // testDynamic();
-  // testObject();
+  testVar();
+  testDynamic();
+  testObject();
   //
-  // testDynamic2();
-  // testVar2();
-  // testObject2();
+  testDynamic2();
+  testVar2();
+  testObject2();
   //
   // testDynamicAndObject();
   //
 
-  // testConst();
-  // testConst2();
-  // testConst3();
-  testIdentical();
-  testIdenticalFinal();
+  testConst();
+  testConst2();
+  testConst3();
+  // testIdentical();
+  // testIdenticalFinal();
 }
 
 void testVar() {
@@ -29,6 +29,7 @@ void testVar2() {
   var data = 123;
   data = 1;
   print('data = $data');
+  //这里报错，有初始值后，类型就固定了
   // data = "test";
   // data = true;
 }
@@ -92,6 +93,12 @@ void testConst() {
   const height = 100;
   const square = width * height;
 
+  var width2 = 100;
+  var height2 = 100;
+  //这里会报错，const只可以用其他const常量来初始化其值。
+  // const square2 = width2 * height2;
+  const square3 = 100 * 300;
+
   const list = const [];
   const list2 = [];
 }
@@ -104,10 +111,14 @@ void testConst2() {
   //不能更改，因为它指向的是一个const类型的数组
   // list3[0] = 2;
   // print('list3[0]=${list3[0]}');
+  //不报错
+  list3 = list4;
 
   //不能更改
   // list4[0] = 2;
   // print('list4[0]=${list4[0]}');
+  //报错
+  // list4 = list3;
 
   //不能更改
   list5[0] = 2;

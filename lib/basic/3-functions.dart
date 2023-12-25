@@ -15,7 +15,8 @@ void main() {
   // print('resultV2_2 =$resultV2_2');
 
   /*匿名函数*/
-  // var printFun = () => print('abc');
+  var printFun = () => print('abc');
+  var printFun1 = {() => print('abc')};
   // printFun();
   //
   // var printFun2 = (name) => print('abc$name');
@@ -24,12 +25,14 @@ void main() {
   // (()=>print('keepon2'))();
   //
 
-  // var ls = ['aaa','bbb','ccc'];
-  // print(test(ls,(str)=>str*2));
+  var ls = ['aaa', 'bbb', 'ccc'];
+  print(test(ls, (str) => str * 2));
+  ls.forEach((e) => print("forEach e=$e"));
 
   //闭包
-  // var addFunc  = makeAndFuc(12);
-  // print(addFunc(22));
+  var addFunc  = makeAndFuc(12);
+  print(addFunc(22));
+  print(addFunc(22).runtimeType);
 
   //函数别名
   MyFunc myFunc = add2NoReturn(11, 22);
@@ -43,7 +46,7 @@ calculator(int a,int b,MyFunc func){
 
 typedef MyFunc(int a, int b);
 
-//返回的是一个匿名函数
+//返回的是一个匿名函数,可以获取返回类型
 Function makeAndFuc(int a) {
   return (int y) => a + y;
 }
