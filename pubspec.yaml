@@ -38,6 +38,7 @@ dependencies:
   azlistview: ^0.1.2
   lpinyin: ^1.0.7
   dio: 2.1.0
+  image_picker: ^0.5.0+9
 #  开发环境下的依赖
 dev_dependencies:
   flutter_test:
@@ -78,6 +79,7 @@ flutter:
     - images/type_group.png
     - images/type_gs.png
     - images/type_train.png
+    - image/mine.jpg
 
 
   # To add assets to your application, add an assets section, like this:
